@@ -4,26 +4,27 @@ import { Normalize } from 'styled-normalize';
 
 const darkTheme = {
 	color: {
-		bg: '1f1f1f',
-		bg_2: '303030',
-		text: 'ffffff',
-		text_2: 'cccccc',
-		nav_div: '1f1f1f',
-		accent: '66ccff',
+		bg: '#1f1f1f',
+		bg_2: '#303030',
+		text: '#ffffff',
+		text_2: '#cccccc',
+		nav_div: '#1f1f1f',
+		accent: '#66ccff',
 	},
-	// font: {
-
-	// }
+	font: {
+		display: 'Russo One',
+		copy: 'Ubuntu Mono',
+	},
 };
 
 const lightTheme = {
 	color: {
-		bg: 'ffffff',
-		bg_2: 'dbdbdb',
-		text: '1f1f1f',
-		text_2: '333333',
-		nav_div: 'b3b3b3',
-		accent: '0088cc',
+		bg: '#ffffff',
+		bg_2: '#dbdbdb',
+		text: '#1f1f1f',
+		text_2: '#333333',
+		nav_div: '#b3b3b3',
+		accent: '#0088cc',
 	},
 	// font: {
 
@@ -32,11 +33,13 @@ const lightTheme = {
 
 const GlobalStyles = createGlobalStyle`
   body {
-    margin: none;
+    margin: 0;
+    background-color: ${({ theme }) => theme.color.bg};
+    font-family: ${({ theme }) => theme.font.copy};
   }
 `;
 
-export default function Theme() {
+export default function Theme({ children }) {
 	return (
 		<ThemeProvider theme={darkTheme}>
 			<GlobalStyles />
