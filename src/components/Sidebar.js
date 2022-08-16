@@ -15,6 +15,7 @@ const MenuButton = styled.div`
 	width: 50px;
 	z-index: 3;
 	cursor: pointer;
+
 	@media screen and (max-width: 1024px) {
 		display: grid;
 		grid-template-rows: repeat(3, 1fr);
@@ -25,6 +26,7 @@ const TopBar = styled.div`
 	height: 5px;
 	width: 50px;
 	background-color: var(--text);
+	transition: all 0.3s ease;
 
 	transform: ${(props) =>
 		props.show ? 'rotate(45deg) translate(0px, 16px)' : 'none'};
@@ -34,6 +36,7 @@ const MiddleBar = styled.div`
 	height: 5px;
 	width: 30px;
 	background-color: var(--text);
+	transition: all 0.3s ease;
 
 	opacity: ${(props) => (props.show ? 0 : '100%')};
 `;
@@ -42,6 +45,7 @@ const BottomBar = styled.div`
 	height: 5px;
 	width: ${(props) => (props.show ? '50px' : '40px')};
 	background-color: var(--text);
+	transition: all 0.3s ease;
 
 	transform: ${(props) =>
 		props.show ? 'rotate(-45deg) translate(0px, -16px)' : 'none'};
@@ -58,6 +62,8 @@ const SidebarWrapper = styled.nav`
 	grid-template-rows: repeat(3, 1fr);
 	align-items: center;
 	justify-items: center;
+	transition: all 0.3s ease;
+
 	@media screen and (max-width: 1024px) {
 		width: 100vw;
 		left: ${(props) => (props.show ? 0 : '-100vw')};
@@ -109,6 +115,7 @@ const NavLink = styled((props) => <Link {...props} />)`
 	text-decoration: none;
 	padding: 1rem 0;
 	border-bottom: 2px solid var(--nav_div);
+	transition: all 0.3s ease;
 
 	@media screen and (max-width: 1024px) {
 		width: 10rem;
@@ -141,7 +148,7 @@ const SocialLinks = styled.div`
 		height: 20px;
 		margin-right: 0.6rem;
 		color: var(--text_2);
-		transition: none;
+		transition: all 0.3s ease;
 	}
 
 	svg:hover {
@@ -155,7 +162,7 @@ const DarkModeToggle = styled.div`
 		height: 20px;
 		color: var(--text_2);
 		margin-left: 0.6rem;
-		transition: none;
+		transition: all 0.3s ease;
 	}
 
 	svg:hover {
