@@ -5,7 +5,6 @@ const HeroSection = styled.section`
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	transition: all 0.3s ease;
 
 	@media screen and (min-width: 1024px) {
 		margin-left: 180px;
@@ -24,7 +23,6 @@ const Title = styled.h1`
 	font-weight: 800;
 	letter-spacing: 0.2rem;
 	margin: 0 auto 0 0;
-	transition: all 0.3s ease;
 	font-size: 2.8rem;
 	width: 380px;
 
@@ -51,7 +49,6 @@ const Tagline = styled.p`
 	font-family: var(--copy);
 	font-size: 1.3rem;
 	margin: 0;
-	transition: all 0.3s ease;
 	width: 300px;
 
 	@media screen and (min-width: 468px) {
@@ -74,7 +71,6 @@ const AccentBar = styled.div`
 	height: 0.8rem;
 	width: 10rem;
 	background-color: var(--accent);
-	transition: all 0.3s ease;
 
 	@media screen and (min-width: 468px) {
 		height: 1rem;
@@ -91,7 +87,6 @@ const AboutSection = styled.section`
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	transition: all 0.3s ease;
 	background-color: var(--accent);
 
 	@media screen and (min-width: 1024px) {
@@ -103,7 +98,6 @@ const ExpSection = styled.section`
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	transition: all 0.3s ease;
 	background-color: var(--bg);
 
 	@media screen and (min-width: 1024px) {

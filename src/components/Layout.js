@@ -9,8 +9,6 @@ const LayoutStyles = styled.div`
 `;
 
 export default function Layout(props) {
-	console.log(props);
-
 	return (
 		<LayoutStyles>
 			<Sidebar />
