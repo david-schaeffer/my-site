@@ -1,10 +1,11 @@
 import React from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
+import ThemeToggler from 'gatsby-plugin-dark-mode/ThemeToggler';
 
 const SidebarWrapper = styled.nav`
 	width: 180px;
@@ -12,10 +13,9 @@ const SidebarWrapper = styled.nav`
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: ${({ theme }) => theme.color.bg_2};
+	background-color: var(--bg_2);
 	display: grid;
-	grid-template-rows: 240px auto 240px;
-	transition: all 0.3s ease;
+	grid-template-rows: repeat(3, 1fr);
 	@media screen and (max-width: 1024px) {
 		left: -180px;
 	}
@@ -39,15 +39,15 @@ const NavLinks = styled.div`
 const NavLink = styled((props) => <Link {...props} />)`
 	text-align: center;
 	width: 80%;
+	font-family: var(--copy);
 	font-size: 1.3rem;
-	color: ${({ theme }) => theme.color.text_2};
+	color: var(--text_2);
 	text-decoration: none;
 	padding: 1rem 0;
-	transition: color 0.3s ease;
-	border-bottom: 2px solid ${({ theme }) => theme.color.nav_div};
+	border-bottom: 2px solid var(--nav_div);
 
 	&:hover {
-		color: ${({ theme }) => theme.color.accent};
+		color: var(--accent);
 	}
 
 	&:last-child {
@@ -56,16 +56,15 @@ const NavLink = styled((props) => <Link {...props} />)`
 `;
 
 const NavBottom = styled.div`
+	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: 3fr 2fr;
-	align-items: center;
-	justify-content: center;
-	width: 80%;
+	width: 90px;
 	margin: auto;
 `;
 
 const SocialLinks = styled.div`
-	border-right: 3px solid ${({ theme }) => theme.color.nav_div};
+	border-right: 2px solid var(--nav_div);
 	display: flex;
 	align-items: center;
 	justify-content: right;
@@ -74,12 +73,11 @@ const SocialLinks = styled.div`
 		width: 20px;
 		height: 20px;
 		margin-right: 0.6rem;
-		color: ${({ theme }) => theme.color.text_2};
-		transition: all 0.3s ease;
+		color: var(--text_2);
 	}
 
 	svg:hover {
-		color: ${({ theme }) => theme.color.accent};
+		color: var(--accent);
 	}
 `;
 
@@ -87,13 +85,12 @@ const DarkModeToggle = styled.div`
 	svg {
 		width: 20px;
 		height: 20px;
-		color: ${({ theme }) => theme.color.text_2};
+		color: var(--text_2);
 		margin-left: 0.6rem;
-		transition: all 0.3s ease;
 	}
 
 	svg:hover {
-		color: ${({ theme }) => theme.color.accent};
+		color: var(--accent);
 		cursor: pointer;
 	}
 `;
@@ -102,13 +99,13 @@ export default function Sidebar() {
 	return (
 		<SidebarWrapper>
 			<LogoWrapper>
-				<Link to='/'>
+				{/* <Link to='/'>
 					{useTheme().id === 'dark' ? (
 						<StaticImage src='../images/logo.png' alt='site logo' />
 					) : (
 						<StaticImage src='../images/logo2.png' alt='site logo' />
 					)}
-				</Link>
+				</Link> */}
 			</LogoWrapper>
 			<NavLinks>
 				<NavLink to='/about'>about</NavLink>
@@ -135,7 +132,16 @@ export default function Sidebar() {
 					</a>
 				</SocialLinks>
 				<DarkModeToggle>
-					<FontAwesomeIcon icon={faCircleHalfStroke} />
+					<ThemeToggler>
+						{({ theme, toggleTheme }) => (
+							<FontAwesomeIcon
+								icon={faCircleHalfStroke}
+								onClick={() =>
+									theme === 'dark' ? toggleTheme('light') : toggleTheme('dark')
+								}
+							/>
+						)}
+					</ThemeToggler>
 				</DarkModeToggle>
 			</NavBottom>
 		</SidebarWrapper>

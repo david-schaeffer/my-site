@@ -19,8 +19,8 @@ const HeroWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-	color: ${({ theme }) => theme.color.text};
-	font-family: ${({ theme }) => theme.font.display};
+	color: var(--text);
+	font-family: var(--display);
 	font-weight: 800;
 	letter-spacing: 0.2rem;
 	margin: 0 auto 0 0;
@@ -47,8 +47,8 @@ const Title = styled.h1`
 `;
 
 const Tagline = styled.p`
-	color: ${({ theme }) => theme.color.text_2};
-	font-family: ${({ theme }) => theme.font.copy};
+	color: var(--text_2);
+	font-family: var(--copy);
 	font-size: 1.3rem;
 	margin: 0;
 	transition: all 0.3s ease;
@@ -73,7 +73,7 @@ const AccentBar = styled.div`
 	margin-top: 1rem;
 	height: 0.8rem;
 	width: 10rem;
-	background-color: ${({ theme }) => theme.color.accent};
+	background-color: var(--accent);
 	transition: all 0.3s ease;
 
 	@media screen and (min-width: 468px) {
@@ -92,7 +92,7 @@ const AboutSection = styled.section`
 	display: flex;
 	align-items: center;
 	transition: all 0.3s ease;
-	background-color: ${({ theme }) => theme.color.accent};
+	background-color: var(--accent);
 
 	@media screen and (min-width: 1024px) {
 		margin-left: 180px;
@@ -104,7 +104,7 @@ const ExpSection = styled.section`
 	display: flex;
 	align-items: center;
 	transition: all 0.3s ease;
-	background-color: ${({ theme }) => theme.color.bg};
+	background-color: var(--bg);
 
 	@media screen and (min-width: 1024px) {
 		margin-left: 180px;
