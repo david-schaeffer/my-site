@@ -1,12 +1,14 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Normalize } from 'styled-normalize';
+// import Cursor from './Cursor';
 
 const GlobalStyles = createGlobalStyle`
   * {
 		margin: 0;
 		box-sizing: border-box;
 		transition: all 0.3s ease;
+		cursor: none;
 	}
 
 	:root {
@@ -38,6 +40,7 @@ export default function Theme({ children }) {
 		<>
 			<GlobalStyles />
 			<Normalize />
+			{/* <Cursor /> */}
 			{children}
 		</>
 	);
