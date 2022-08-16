@@ -1,8 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-import { useTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
 
 const SidebarWrapper = styled.nav`
 	width: 180px;
@@ -34,10 +36,6 @@ const NavLinks = styled.div`
 	justify-content: center;
 `;
 
-const NavBottom = styled.div`
-	height: auto;
-`;
-
 const NavLink = styled((props) => <Link {...props} />)`
 	text-align: center;
 	width: 80%;
@@ -57,16 +55,50 @@ const NavLink = styled((props) => <Link {...props} />)`
 	}
 `;
 
+const NavBottom = styled.div`
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	margin: auto;
+`;
+
 const SocialLinks = styled.div`
-	height: 20px;
+	border-right: 3px solid ${({ theme }) => theme.color.nav_div};
+	display: flex;
+	align-items: center;
+	justify-content: right;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		margin-right: 0.6rem;
+		color: ${({ theme }) => theme.color.text_2};
+		transition: all 0.3s ease;
+	}
+
+	svg:hover {
+		color: ${({ theme }) => theme.color.accent};
+	}
 `;
 
 const DarkModeToggle = styled.div`
-	height: 20px;
+	svg {
+		width: 20px;
+		height: 20px;
+		color: ${({ theme }) => theme.color.text_2};
+		margin-left: 0.6rem;
+		transition: all 0.3s ease;
+	}
+
+	svg:hover {
+		color: ${({ theme }) => theme.color.accent};
+		cursor: pointer;
+	}
 `;
 
 export default function Sidebar() {
-	console.log(useTheme().id);
 	return (
 		<SidebarWrapper>
 			<LogoWrapper>
@@ -86,8 +118,25 @@ export default function Sidebar() {
 				{/* MAKE THIS DOWNLOADABLE RESUME OR VIEW IN BROWSER? */}
 			</NavLinks>
 			<NavBottom>
-				<SocialLinks>SocialLinks</SocialLinks>
-				<DarkModeToggle>ModeToggle</DarkModeToggle>
+				<SocialLinks>
+					<a
+						href='https://www.linkedin.com/in/d-schaeffer/'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<FontAwesomeIcon icon={faLinkedinIn} />
+					</a>
+					<a
+						href='https://github.com/dbschaeffer29/'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<FontAwesomeIcon icon={faGithub} />
+					</a>
+				</SocialLinks>
+				<DarkModeToggle>
+					<FontAwesomeIcon icon={faCircleHalfStroke} />
+				</DarkModeToggle>
 			</NavBottom>
 		</SidebarWrapper>
 	);

@@ -7,11 +7,11 @@ const LayoutStyles = styled.div`
 	overflow: hidden;
 `;
 
-export default function Layout({ children }) {
+export default function Layout(props) {
 	return (
 		<LayoutStyles>
 			<Sidebar />
-			<main>{children}</main>
+			<main>{props.children}</main>
 		</LayoutStyles>
 	);
 }

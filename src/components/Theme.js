@@ -46,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
 
 export default function Theme({ children }) {
 	return (
-		<ThemeProvider theme={light}>
+		<ThemeProvider theme={dark}>
 			<GlobalStyles />
 			<Normalize />
 			{children}

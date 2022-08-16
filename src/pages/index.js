@@ -1,22 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const HomepageStyles = styled.section`
+const HeroSection = styled.section`
 	height: 100vh;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+
+	@media screen and (min-width: 1024px) {
+		margin-left: 180px;
+	}
 `;
 
 const HeroWrapper = styled.div`
 	width: 100vw;
 	box-sizing: border-box;
 	padding: 2rem;
-	transition: all 0.3s ease;
-
-	@media screen and (min-width: 1024px) {
-		margin-left: 180px;
-	}
 `;
 
 const Title = styled.h1`
@@ -88,16 +87,49 @@ const AccentBar = styled.div`
 	}
 `;
 
+const AboutSection = styled.section`
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	transition: all 0.3s ease;
+	background-color: ${({ theme }) => theme.color.accent};
+
+	@media screen and (min-width: 1024px) {
+		margin-left: 180px;
+	}
+`;
+
+const ExpSection = styled.section`
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	transition: all 0.3s ease;
+	background-color: ${({ theme }) => theme.color.bg};
+
+	@media screen and (min-width: 1024px) {
+		margin-left: 180px;
+	}
+`;
+
 export default function Home() {
 	return (
-		<HomepageStyles>
-			<HeroWrapper>
-				<Title>DAVID SCHAEFFER</Title>
-				<Tagline>
-					Computer Science & Behavioral Neuroscience at Northeastern University
-				</Tagline>
-				<AccentBar />
-			</HeroWrapper>
-		</HomepageStyles>
+		<>
+			<HeroSection>
+				<HeroWrapper>
+					<Title>DAVID SCHAEFFER</Title>
+					<Tagline>
+						Computer Science & Behavioral Neuroscience at Northeastern
+						University
+					</Tagline>
+					<AccentBar />
+				</HeroWrapper>
+			</HeroSection>
+			<AboutSection>
+				<h1>About</h1>
+			</AboutSection>
+			<ExpSection>
+				<h1>Experience</h1>
+			</ExpSection>
+		</>
 	);
 }
