@@ -33,5 +33,9 @@
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5",
     "styled-normalize": "^8.0.7"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/dbschaeffer29/my-site.git",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.2"
 }
