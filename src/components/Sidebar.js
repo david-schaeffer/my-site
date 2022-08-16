@@ -167,7 +167,6 @@ const DarkModeToggle = styled.div`
 
 	svg:hover {
 		color: var(--accent);
-		cursor: pointer;
 	}
 `;
 
@@ -228,7 +227,7 @@ export default function Sidebar() {
 							<FontAwesomeIcon icon={faGithub} />
 						</a>
 					</SocialLinks>
-					<DarkModeToggle>
+					<DarkModeToggle id='darkModeToggle'>
 						<ThemeToggler>
 							{({ theme, toggleTheme }) => (
 								<FontAwesomeIcon

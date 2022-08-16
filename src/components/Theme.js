@@ -7,7 +7,9 @@ const GlobalStyles = createGlobalStyle`
   * {
 		margin: 0;
 		box-sizing: border-box;
-		cursor: none;
+		@media screen and (min-width: 1024px) {
+			cursor: none;
+		}
 	}
 
 	:root {

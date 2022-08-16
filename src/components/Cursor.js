@@ -1,34 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-const transformMouse = (clicked, linkHover) => {
-	if (clicked) {
-		return 'translate(-50%, -50%) scale(0.9)';
-	} else if (linkHover) {
-		return 'translate(-50%, -50%) scale(1.25)';
-	} else {
-		return 'translate(-50%, -50%)';
-	}
-};
-
 const StyledCursor = styled.div`
 	width: 40px;
 	height: 40px;
 	border: 2px solid var(--text);
 	border-radius: 100%;
 	position: fixed;
-	transform: ${({ clicked, linkHover }) => {
-		transformMouse(clicked, linkHover);
-	}};
 	pointer-events: none;
 	z-index: 9999;
-	background-color: var(--text);
 	transition: all 150ms ease;
-	transition-property: opacity, transform;
+	transition-property: opacity, transform, background-color;
+	transform: translate(-50%, -50%);
 
-	opacity: ${(props) => (props.hidden ? 0 : '50%')};
+	transform: ${({ linkHover }) =>
+		linkHover && 'translate(-50%, -50%) scale(1.2)'};
+	transform: ${({ clicked }) => clicked && 'translate(-50%, -50%) scale(0.9)'};
+
+	background-color: ${({ clicked }) => clicked && 'var(--text)'};
+	background-color: ${({ linkHover }) => linkHover && 'var(--text)'};
+
+	opacity: ${({ hidden }) => (hidden ? 0 : 1)};
+	opacity: ${({ linkHover }) => linkHover && '0.5'};
+
 	left: ${(props) => `${props.x}px`};
 	top: ${(props) => `${props.y}px`};
+
+	@media screen and (max-width: 1024px) {
+		display: none;
+	}
 `;
 
 export default function Cursor() {
@@ -48,6 +48,10 @@ export default function Cursor() {
 			el.addEventListener('mouseover', () => setLinkHover(true));
 			el.addEventListener('mouseout', () => setLinkHover(false));
 		});
+		const darkModeToggle = document.getElementById('darkModeToggle');
+
+		darkModeToggle.addEventListener('mouseover', () => setLinkHover(true));
+		darkModeToggle.addEventListener('mouseout', () => setLinkHover(false));
 	};
 
 	const addEventListeners = () => {
