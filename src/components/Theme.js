@@ -40,7 +40,7 @@ export default function Theme({ children }) {
 	return (
 		<>
 			<GlobalStyles />
-			<Normalize />
+			{/* <Normalize /> */}
 			<Cursor />
 			{children}
 		</>

@@ -13,13 +13,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [
-					`Aldrich`,
-					`Russo+One`,
-					`Dhurjati`,
-					`Ubuntu+Mono`,
-					`Space+Mono`,
-				],
+				fonts: [`Russo+One`, `Ubuntu+Mono`],
 				display: 'swap',
 			},
 		},
