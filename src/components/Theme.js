@@ -5,7 +5,7 @@ import Cursor from './Cursor';
 
 const GlobalStyles = createGlobalStyle`
   * {
-		margin: 0;
+		margin: 0; 
 		box-sizing: border-box;
 		@media screen and (min-width: 1024px) {
 			cursor: none;
@@ -40,7 +40,7 @@ export default function Theme({ children }) {
 	return (
 		<>
 			<GlobalStyles />
-			{/* <Normalize /> */}
+			<Normalize />
 			<Cursor />
 			{children}
 		</>
