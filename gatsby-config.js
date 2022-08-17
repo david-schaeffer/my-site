@@ -16,15 +16,16 @@ module.exports = {
 		// 	},
 		// },
 		{
-			resolve: `gatsby-plugin-prefetch-google-fonts`,
+			resolve: `gatsby-plugin-google-fonts-v2`,
 			options: {
 				fonts: [
 					{
-						family: `Russo One`,
+						family: 'Russo One',
+						weights: ['400'],
 					},
 					{
-						family: `Ubuntu Mono`,
-						variants: [`400`, `700`],
+						family: 'Ubuntu Mono',
+						weights: ['400', '700'],
 					},
 				],
 			},
