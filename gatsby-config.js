@@ -4,7 +4,14 @@ module.exports = {
 		siteUrl: `https://www.yourdomain.tld`,
 	},
 	plugins: [
-		'gatsby-plugin-styled-components',
+		{
+			resolve: `gatsby-plugin-styled-components`,
+			options: {
+				ssr: true,
+				// displayName: false,
+				// minify: false
+			},
+		},
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
