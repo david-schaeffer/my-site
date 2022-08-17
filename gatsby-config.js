@@ -8,26 +8,11 @@ module.exports = {
 		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-dark-mode`,
 		`gatsby-plugin-netlify`,
-		// {
-		// 	resolve: `gatsby-plugin-google-fonts`,
-		// 	options: {
-		// 		fonts: [`Russo+One`, `Ubuntu+Mono`],
-		// 		display: 'swap',
-		// 	},
-		// },
 		{
-			resolve: `gatsby-plugin-google-fonts-v2`,
+			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [
-					{
-						family: 'Russo One',
-						weights: ['400'],
-					},
-					{
-						family: 'Ubuntu Mono',
-						weights: ['400', '700'],
-					},
-				],
+				fonts: [`Russo+One`, `Ubuntu+Mono`],
+				display: 'swap',
 			},
 		},
 	],
