@@ -127,3 +127,7 @@ export default function Home() {
 		</>
 	);
 }
+
+export const Head = () => {
+	<title>David Schaeffer - Portfolio</title>;
+};
