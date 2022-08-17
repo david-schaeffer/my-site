@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
-import ThemeToggler from 'gatsby-plugin-dark-mode/ThemeToggler';
 
 const MenuButton = styled.div`
 	display: none;
@@ -228,18 +227,7 @@ export default function Sidebar() {
 						</a>
 					</SocialLinks>
 					<DarkModeToggle id='darkModeToggle'>
-						<ThemeToggler>
-							{({ theme, toggleTheme }) => (
-								<FontAwesomeIcon
-									icon={faCircleHalfStroke}
-									onClick={() =>
-										theme === 'dark'
-											? toggleTheme('light')
-											: toggleTheme('dark')
-									}
-								/>
-							)}
-						</ThemeToggler>
+						<FontAwesomeIcon icon={faCircleHalfStroke} />
 					</DarkModeToggle>
 				</NavBottom>
 			</SidebarWrapper>

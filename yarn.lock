@@ -7742,17 +7742,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-dark-mode@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "gatsby-plugin-dark-mode@npm:1.1.2"
-  dependencies:
-    prop-types: ^15.5.7
-  peerDependencies:
-    react: 16.x
-  checksum: f487d7081267d22dafe1f313433c1ef2f5a9888e0aff62559e36df9d4097f839cd8ddab8f587760b229c23871ccbd251cd692e5075163e14c61d62449987e9ff
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-google-fonts@npm:^1.0.1":
   version: 1.0.1
   resolution: "gatsby-plugin-google-fonts@npm:1.0.1"
@@ -11934,7 +11923,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.7, prop-types@npm:^15.6.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -12948,7 +12937,6 @@ __metadata:
     "@fortawesome/react-fontawesome": ^0.2.0
     babel-plugin-styled-components: ^2.0.7
     gatsby: ^4.20.0
-    gatsby-plugin-dark-mode: ^1.1.2
     gatsby-plugin-google-fonts: ^1.0.1
     gatsby-plugin-netlify: ^5.0.1
     gatsby-plugin-styled-components: ^5.21.0
