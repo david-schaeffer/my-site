@@ -41,7 +41,7 @@ export default function Cursor() {
 		addEventListeners();
 		handleLinkHoverEvents();
 		return () => removeEventListeners();
-	}, []);
+	});
 
 	const handleLinkHoverEvents = () => {
 		document.querySelectorAll('a').forEach((el) => {

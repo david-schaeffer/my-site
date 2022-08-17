@@ -7987,7 +7987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-styled-components@npm:^5.20.0":
+"gatsby-plugin-styled-components@npm:^5.21.0":
   version: 5.21.0
   resolution: "gatsby-plugin-styled-components@npm:5.21.0"
   dependencies:
@@ -13256,7 +13256,7 @@ __metadata:
     gatsby-plugin-image: ^2.20.0
     gatsby-plugin-netlify: ^5.0.1
     gatsby-plugin-sharp: ^4.20.0
-    gatsby-plugin-styled-components: ^5.20.0
+    gatsby-plugin-styled-components: ^5.21.0
     gatsby-source-filesystem: ^4.20.0
     gatsby-transformer-sharp: ^4.20.0
     prop-types: ^15.8.1
