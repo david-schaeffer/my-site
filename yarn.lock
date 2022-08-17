@@ -7753,6 +7753,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-google-fonts@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "gatsby-plugin-google-fonts@npm:1.0.1"
+  checksum: 775aee252ee1bf7d77ae6ffd8cd44e14ee3badfab4f46c3ed2a438527894cbffe9383464073e33ae5b2442d70b2434df1358749f5c2e575538143508ff68a1b5
+  languageName: node
+  linkType: hard
+
 "gatsby-plugin-netlify@npm:^5.0.1":
   version: 5.0.1
   resolution: "gatsby-plugin-netlify@npm:5.0.1"
@@ -12942,6 +12949,7 @@ __metadata:
     babel-plugin-styled-components: ^2.0.7
     gatsby: ^4.20.0
     gatsby-plugin-dark-mode: ^1.1.2
+    gatsby-plugin-google-fonts: ^1.0.1
     gatsby-plugin-netlify: ^5.0.1
     gatsby-plugin-styled-components: ^5.21.0
     prop-types: ^15.8.1
