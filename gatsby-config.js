@@ -4,15 +4,9 @@ module.exports = {
 		siteUrl: `https://www.yourdomain.tld`,
 	},
 	plugins: [
-		{
-			resolve: `gatsby-plugin-styled-components`,
-			options: {
-				ssr: true,
-				// displayName: false,
-				// minify: false
-			},
-		},
+		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-dark-mode`,
+		`gatsby-plugin-netlify`,
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
