@@ -1,19 +1,14 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import styled from 'styled-components';
+import Cursor from './Cursor';
+import '../assets/main.css';
 
-const LayoutStyles = styled.div`
-	min-height: 100vh;
-	overflow: hidden;
-	background-color: var(--bg);
-	transition: all 0.3s ease;
-`;
-
-export default function Layout(props) {
+export default function Layout({ children }) {
 	return (
-		<LayoutStyles>
+		<>
 			<Sidebar />
-			<main>{props.children}</main>
-		</LayoutStyles>
+			<main>{children}</main>
+			<Cursor />
+		</>
 	);
 }

@@ -3822,6 +3822,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@use-it/event-listener@npm:^0.1.2":
+  version: 0.1.7
+  resolution: "@use-it/event-listener@npm:0.1.7"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 6d29f72fd4da0d3a2b015389b646d9b2f7e0ff9d04b2781bad70a81477f7ee3e79256b4abbd4d4bbd9f871d38ca6f7b48b9104e504d176b88f3a149a32fcaf99
+  languageName: node
+  linkType: hard
+
 "@vercel/webpack-asset-relocator-loader@npm:^1.7.0":
   version: 1.7.3
   resolution: "@vercel/webpack-asset-relocator-loader@npm:1.7.3"
@@ -7742,17 +7751,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-dark-mode@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "gatsby-plugin-dark-mode@npm:1.1.2"
-  dependencies:
-    prop-types: ^15.5.7
-  peerDependencies:
-    react: 16.x
-  checksum: f487d7081267d22dafe1f313433c1ef2f5a9888e0aff62559e36df9d4097f839cd8ddab8f587760b229c23871ccbd251cd692e5075163e14c61d62449987e9ff
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-google-fonts@npm:^1.0.1":
   version: 1.0.1
   resolution: "gatsby-plugin-google-fonts@npm:1.0.1"
@@ -7827,6 +7825,19 @@ __metadata:
   peerDependencies:
     gatsby: ^4.0.0-next
   checksum: 512b3fcd015b8aab1de9c388ff4ded86164909671b91c64896c204035640a75a2297ecd37408b13a4a5d3134727589c85b555fc1ebde89027c22b1eb18c2abe9
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-use-dark-mode@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "gatsby-plugin-use-dark-mode@npm:1.5.0"
+  dependencies:
+    prop-types: ^15.8.1
+    terser: ^4.0.0
+  peerDependencies:
+    gatsby: ^2.0.0 || ^3.0.0 || ^4.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 110c60e89db5ea9f0d99ba84178193aee1936527705b97447eb531b655302c612239b8907ee1ebf9435380889c1b94da18394802368510a47a0d892b0a912478
   languageName: node
   linkType: hard
 
@@ -11934,7 +11945,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.7, prop-types@npm:^15.6.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -12948,15 +12959,15 @@ __metadata:
     "@fortawesome/react-fontawesome": ^0.2.0
     babel-plugin-styled-components: ^2.0.7
     gatsby: ^4.20.0
-    gatsby-plugin-dark-mode: ^1.1.2
     gatsby-plugin-google-fonts: ^1.0.1
     gatsby-plugin-netlify: ^5.0.1
     gatsby-plugin-styled-components: ^5.21.0
-    prop-types: ^15.8.1
+    gatsby-plugin-use-dark-mode: ^1.5.0
     react: ^18.2.0
     react-dom: ^18.2.0
     styled-components: ^5.3.5
     styled-normalize: ^8.0.7
+    use-dark-mode: ^2.3.1
   languageName: unknown
   linkType: soft
 
@@ -13087,7 +13098,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.17, source-map-support@npm:~0.5.20":
+"source-map-support@npm:^0.5.17, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
@@ -13626,6 +13637,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"terser@npm:^4.0.0":
+  version: 4.8.1
+  resolution: "terser@npm:4.8.1"
+  dependencies:
+    commander: ^2.20.0
+    source-map: ~0.6.1
+    source-map-support: ~0.5.12
+  bin:
+    terser: bin/terser
+  checksum: b342819bf7e82283059aaa3f22bb74deb1862d07573ba5a8947882190ad525fd9b44a15074986be083fd379c58b9a879457a330b66dcdb77b485c44267f9a55a
+  languageName: node
+  linkType: hard
+
 "terser@npm:^5.14.1, terser@npm:^5.2.0":
   version: 5.14.2
   resolution: "terser@npm:5.14.2"
@@ -14131,6 +14155,29 @@ __metadata:
   dependencies:
     prepend-http: ^2.0.0
   checksum: 1040e357750451173132228036aff1fd04abbd43eac1fb3e4fca7495a078bcb8d33cb765fe71ad7e473d9c94d98fd67adca63bd2716c815a2da066198dd37217
+  languageName: node
+  linkType: hard
+
+"use-dark-mode@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "use-dark-mode@npm:2.3.1"
+  dependencies:
+    "@use-it/event-listener": ^0.1.2
+    use-persisted-state: ^0.3.0
+  peerDependencies:
+    react: ^16.8.0
+  checksum: 2a40129922bdf5780ebe32e6a0eedd0f7355cb157d3c806ec3e94532da4ce795175d9bcc3c967071f2f8035e964ffdaff6a004b0a62a4e0ec2462858407571fc
+  languageName: node
+  linkType: hard
+
+"use-persisted-state@npm:^0.3.0":
+  version: 0.3.3
+  resolution: "use-persisted-state@npm:0.3.3"
+  dependencies:
+    "@use-it/event-listener": ^0.1.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0
+  checksum: ab637e526180aca1b487f7da38926b864d4ad524b28176e9e2ce58c441bc49f29c91e324eeb75ad579f8468c17f990793c0fff69f55b138d1be9ed8ddb79ecee
   languageName: node
   linkType: hard
 

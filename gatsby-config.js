@@ -6,8 +6,8 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-styled-components`,
-		`gatsby-plugin-dark-mode`,
 		`gatsby-plugin-netlify`,
+		`gatsby-plugin-use-dark-mode`,
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
