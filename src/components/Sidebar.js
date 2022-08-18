@@ -4,7 +4,17 @@ import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
-import ThemeToggler from 'gatsby-plugin-dark-mode/ThemeToggler';
+import useDarkMode from 'use-dark-mode';
+
+const DarkModeToggle = ({ className }) => {
+	const darkMode = useDarkMode(true);
+
+	return (
+		<div className={className}>
+			<FontAwesomeIcon icon={faCircleHalfStroke} onClick={darkMode.toggle} />
+		</div>
+	);
+};
 
 const MenuButton = styled.div`
 	position: fixed;
@@ -144,7 +154,7 @@ const SocialLinks = styled.div`
 	}
 `;
 
-const DarkModeToggle = styled.div`
+const StyledDarkModeToggle = styled(DarkModeToggle)`
 	svg {
 		width: 20px;
 		height: 20px;
@@ -216,20 +226,9 @@ export default function Sidebar() {
 							<FontAwesomeIcon icon={faGithub} />
 						</a>
 					</SocialLinks>
-					<DarkModeToggle id='darkModeToggle'>
-						<ThemeToggler>
-							{({ theme, toggleTheme }) => (
-								<FontAwesomeIcon
-									icon={faCircleHalfStroke}
-									onClick={() =>
-										theme === 'dark'
-											? toggleTheme('light')
-											: toggleTheme('dark')
-									}
-								/>
-							)}
-						</ThemeToggler>
-					</DarkModeToggle>
+					<div id='darkModeToggle'>
+						<StyledDarkModeToggle />
+					</div>
 				</NavBottom>
 			</SidebarWrapper>
 		</>

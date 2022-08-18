@@ -1,14 +1,13 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Normalize } from 'styled-normalize';
-import Cursor from './Cursor';
 
 const GlobalStyles = createGlobalStyle`
   * {
 		margin: 0; 
 		box-sizing: border-box;
 		@media screen and (min-width: 1024px) {
-			cursor: none;
+			/* cursor: none; */
 		}
 	}
 
@@ -17,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
 		--display: Russo One;
 	}
 	
-	body {
+	body.light-mode {
 		--bg: #ffffff;
 		--bg_2: #dbdbdb;
 		--text: #1f1f1f;
@@ -26,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
 		--accent: #0088cc;
   }
 
-	body.dark {
+	body.dark-mode {
 		--bg: #1f1f1f;
 		--bg_2: #303030;
 		--text: #ffffff;
@@ -41,7 +40,6 @@ export default function Theme({ children }) {
 		<>
 			<GlobalStyles />
 			<Normalize />
-			<Cursor />
 			{children}
 		</>
 	);
