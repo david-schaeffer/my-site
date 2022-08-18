@@ -5,6 +5,8 @@ const HeroSection = styled.section`
 	height: 100vh;
 	display: flex;
 	align-items: center;
+	background-color: var(--bg);
+	transition: all 0.3s ease;
 
 	@media screen and (min-width: 1024px) {
 		margin-left: 180px;
@@ -12,17 +14,15 @@ const HeroSection = styled.section`
 `;
 
 const HeroWrapper = styled.div`
-	width: 100vw;
-	box-sizing: border-box;
+	width: 100%;
 	padding: 2rem;
 `;
 
 const Title = styled.h1`
 	color: var(--text);
 	font-family: var(--display);
-	font-weight: 800;
 	letter-spacing: 0.2rem;
-	margin: 0 auto 0 0;
+	margin: 0;
 	font-size: 2.8rem;
 	width: 380px;
 
@@ -32,14 +32,10 @@ const Title = styled.h1`
 	}
 
 	@media screen and (min-width: 668px) {
-		width: auto;
+		width: 100%;
 	}
 
 	@media screen and (min-width: 768px) {
-		font-size: 4rem;
-	}
-
-	@media screen and (min-width: 1024px) {
 		font-size: 4rem;
 	}
 `;
@@ -48,7 +44,6 @@ const Tagline = styled.p`
 	color: var(--text_2);
 	font-family: var(--copy);
 	font-size: 1.3rem;
-	margin: 0;
 	width: 300px;
 
 	@media screen and (min-width: 468px) {
@@ -67,10 +62,10 @@ const Tagline = styled.p`
 `;
 
 const AccentBar = styled.div`
+	background-color: var(--accent);
 	margin-top: 1rem;
 	height: 0.8rem;
 	width: 10rem;
-	background-color: var(--accent);
 
 	@media screen and (min-width: 468px) {
 		height: 1rem;
@@ -84,10 +79,10 @@ const AccentBar = styled.div`
 `;
 
 const AboutSection = styled.section`
+	background-color: var(--accent);
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	background-color: var(--accent);
 
 	@media screen and (min-width: 1024px) {
 		margin-left: 180px;
@@ -95,10 +90,10 @@ const AboutSection = styled.section`
 `;
 
 const ExpSection = styled.section`
+	background-color: var(--bg);
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	background-color: var(--bg);
 
 	@media screen and (min-width: 1024px) {
 		margin-left: 180px;
@@ -127,7 +122,3 @@ export default function Home() {
 		</>
 	);
 }
-
-export const Head = () => {
-	<title>David Schaeffer - Portfolio</title>;
-};

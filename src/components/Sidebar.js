@@ -7,45 +7,39 @@ import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import ThemeToggler from 'gatsby-plugin-dark-mode/ThemeToggler';
 
 const MenuButton = styled.div`
-	display: none;
 	position: fixed;
 	top: 2rem;
 	left: 2rem;
-	height: 35px;
-	width: 50px;
-	z-index: 3;
+	z-index: 1;
 	cursor: pointer;
 
-	@media screen and (max-width: 1024px) {
-		display: grid;
-		grid-template-rows: repeat(3, 1fr);
+	@media screen and (min-width: 1024px) {
+		display: none;
+	}
+
+	div {
+		height: 5px;
+		margin-bottom: 6px;
+		background-color: var(--text);
+		transition: all 0.3s ease;
 	}
 `;
 
 const TopBar = styled.div`
-	height: 5px;
 	width: 50px;
-	background-color: var(--text);
-	transition: all 0.3s ease;
 
 	transform: ${(props) =>
 		props.show ? 'rotate(45deg) translate(0px, 16px)' : 'none'};
 `;
 
 const MiddleBar = styled.div`
-	height: 5px;
 	width: 30px;
-	background-color: var(--text);
-	transition: all 0.3s ease;
 
 	opacity: ${(props) => (props.show ? 0 : '100%')};
 `;
 
 const BottomBar = styled.div`
-	height: 5px;
 	width: ${(props) => (props.show ? '50px' : '40px')};
-	background-color: var(--text);
-	transition: all 0.3s ease;
 
 	transform: ${(props) =>
 		props.show ? 'rotate(-45deg) translate(0px, -16px)' : 'none'};
@@ -71,8 +65,6 @@ const SidebarWrapper = styled.nav`
 `;
 
 const LogoWrapper = styled.div`
-	width: 90px;
-	height: 90px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -86,35 +78,31 @@ const LogoWrapper = styled.div`
 const Initials = styled.h1`
 	color: var(--text);
 	font-family: var(--display);
-	font-weight: 800;
 	font-size: 4.5rem;
 	letter-spacing: -0.2rem;
 	margin: 0;
 `;
 
 const Underline = styled.div`
+	background-color: var(--accent);
 	margin-top: -0.3rem;
 	height: 0.8rem;
-	width: 100%;
-	background-color: var(--accent);
 `;
 
 const NavLinks = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 `;
 
 const NavLink = styled((props) => <Link {...props} />)`
-	text-align: center;
-	width: 8rem;
-	font-family: var(--copy);
-	font-size: 1.3rem;
+	border-bottom: 2px solid var(--nav_div);
 	color: var(--text_2);
+	font-family: var(--copy);
+	text-align: center;
+	font-size: 1.3rem;
+	width: 8rem;
 	text-decoration: none;
 	padding: 1rem 0;
-	border-bottom: 2px solid var(--nav_div);
 	transition: all 0.3s ease;
 
 	@media screen and (max-width: 1024px) {
@@ -163,6 +151,7 @@ const DarkModeToggle = styled.div`
 		color: var(--text_2);
 		margin-left: 0.6rem;
 		transition: all 0.3s ease;
+		cursor: pointer;
 	}
 
 	svg:hover {
