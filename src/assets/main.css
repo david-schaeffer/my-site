@@ -236,11 +236,16 @@ a {
   color: var(--secondary);
   margin-left: 0.6rem;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .sidebar--darkmode_toggle:hover {
   color: var(--accent);
+}
+
+@media screen and (max-width: 1024px) {
+  .sidebar--darkmode_toggle {
+    cursor: pointer;
+  }
 }
 
 /* HOMEPAGE */
