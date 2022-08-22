@@ -61,19 +61,19 @@ export default function Sidebar() {
 					<Logo />
 				</div>
 				<div className='sidebar--nav_links'>
-					<Link className='sidebar--nav_link' to='/about' onClick={toggleMenu}>
+					<Link className='sidebar--nav_link' to='/#about' onClick={toggleMenu}>
 						about
 					</Link>
 					<Link
 						className='sidebar--nav_link'
-						to='/experience'
+						to='/#experience'
 						onClick={toggleMenu}
 					>
 						experience
 					</Link>
 					<Link
 						className='sidebar--nav_link'
-						to='/contact'
+						to='/#contact'
 						onClick={toggleMenu}
 					>
 						contact
