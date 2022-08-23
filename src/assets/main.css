@@ -412,6 +412,7 @@ a {
 
 .about--image:hover>.img {
   filter: none;
+  border-radius: 20px;
 }
 
 .img {
