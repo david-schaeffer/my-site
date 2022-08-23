@@ -260,7 +260,7 @@ a {
 
 .section {
   background-color: var(--background);
-  height: 100vh;
+  min-height: 100vh;
   transition: all 0.3s ease;
 }
 
@@ -359,13 +359,13 @@ a {
 .about--wrapper {
   width: 100%;
   padding: 2rem;
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .about--title {
-  grid-area: title;
   font-size: 2rem;
   font-family: var(--subheading);
   font-style: italic;
@@ -374,7 +374,6 @@ a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-bottom: 16px;
 }
 
 .about--title::after {
@@ -391,10 +390,10 @@ a {
 
 .about--info {
   grid-area: info;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: var(--copy);
   color: var(--secondary);
-  /* padding: 2rem 2rem 0 0; */
+  padding-top: 1rem;
 }
 
 .accent-text {
@@ -407,9 +406,48 @@ a {
 .about--image {
   align-self: center;
   margin-top: 32px;
+  border-radius: 20px;
+  max-width: 300px;
 }
 
+.about--image:hover>.img {
+  filter: none;
+}
 
-@media screen and (max-width: 1024px) {
-  
+.img {
+  border-radius: 20px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .about--wrapper {
+    display: grid;
+    grid-template-areas: 
+      'title .'
+      'info image';
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .about--title {
+    grid-area: title;
+    font-size: 2.2rem;
+  }
+
+  .about--title::after {
+    width: 100px;
+    top: 28px;
+  }
+
+  .about--info {
+    grid-area: info;
+    padding: 2rem 2rem 0 0;
+  }
+
+  .about--image {
+    grid-area: image;
+    align-self: auto;
+    margin-left: 1rem;
+  }
+
 }

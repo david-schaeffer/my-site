@@ -106,7 +106,7 @@ export default function Sidebar() {
 							/>
 						</a>
 					</div>
-					<div id='darkModeToggle'>
+					<div className='hover'>
 						<DarkModeToggle />
 					</div>
 				</div>

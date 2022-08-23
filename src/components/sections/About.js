@@ -12,18 +12,32 @@ export default function About() {
 					Neuroscience in the honors program at Northeastern University.
 					<br />
 					<br />
-					Lorem ipsum dolor sit amet.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit duis
+					tristique sollicitudin nibh sit amet commodo. Non arcu risus quis
+					varius quam quisque id. Tellus rutrum tellus pellentesque eu tincidunt
+					tortor aliquam nulla facilisi.
+					<br />
+					<br />
+					Eu non diam phasellus vestibulum lorem sed risus ultricies tristique.
+					Malesuada proin libero nunc consequat interdum varius sit amet mattis.
+					Consequat mauris nunc congue nisi vitae suscipit tellus. Mattis enim
+					ut tellus elementum sagittis.
+					<br />
+					<br />
+					Sed velit dignissim sodales ut. Sagittis eu volutpat odio facilisis
+					mauris sit. Sit amet risus nullam eget felis eget nunc lobortis
+					mattis. In arcu cursus euismod quis viverra nibh.
 				</p>
 				<div className='about--image'>
 					<StaticImage
-						src='../../assets/images/me.jpg'
+						className='img hover'
+						src='../../assets/images/me-sqr.jpg'
 						alt='Headshot'
 						placeholder='tracedSVG'
-						height={200}
-						width={200}
-						imgStyle={{
-							borderRadius: '20px',
-						}}
+						layout='constrained'
+						width={500}
+						quality={95}
 					/>
 				</div>
 			</div>

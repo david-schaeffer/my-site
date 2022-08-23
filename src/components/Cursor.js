@@ -17,10 +17,11 @@ export default function Cursor() {
 			el.addEventListener('mouseover', () => setLinkHover(true));
 			el.addEventListener('mouseout', () => setLinkHover(false));
 		});
-		const darkModeToggle = document.getElementById('darkModeToggle');
 
-		darkModeToggle.addEventListener('mouseover', () => setLinkHover(true));
-		darkModeToggle.addEventListener('mouseout', () => setLinkHover(false));
+		document.querySelectorAll('.hover').forEach((el) => {
+			el.addEventListener('mouseover', () => setLinkHover(true));
+			el.addEventListener('mouseout', () => setLinkHover(false));
+		});
 	};
 
 	const addEventListeners = () => {
