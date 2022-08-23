@@ -36,8 +36,6 @@ export default function About() {
 						alt='Headshot'
 						placeholder='tracedSVG'
 						layout='constrained'
-						width={500}
-						quality={95}
 					/>
 				</div>
 			</div>
