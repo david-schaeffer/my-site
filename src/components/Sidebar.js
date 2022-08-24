@@ -35,6 +35,13 @@ export default function Sidebar() {
 		window.innerWidth < 1024 && setShowMenu(!showMenu);
 	}
 
+	console.log(showMenu);
+	if (showMenu) {
+		document.body.classList.add('lock-scroll');
+	} else {
+		document.body.classList.remove('lock-scroll');
+	}
+
 	return (
 		<>
 			<div className='sidebar--menu_btn' onClick={toggleMenu}>

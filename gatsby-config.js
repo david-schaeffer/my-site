@@ -1,7 +1,12 @@
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
 	siteMetadata: {
-		title: `David Schaeffer`,
+		title: `David Schaeffer: Portfolio`,
 		description: `A personal portfolio.`,
+		author: `@dschaeffer`,
 		siteUrl: `https://www.dschaeffer.com`,
 	},
 	plugins: [
@@ -9,6 +14,13 @@ module.exports = {
 		`gatsby-plugin-use-dark-mode`,
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-source-contentful`,
+			options: {
+				spaceId: `9rfs6i5wbcz2`,
+				accessToken: process.env.CONTENTFUL_API_KEY,
+			},
+		},
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
