@@ -5,7 +5,7 @@ export default function About() {
 	return (
 		<section id='about' className='about--section section'>
 			<div className='about--wrapper'>
-				<h3 className='about--title'>about me</h3>
+				<h3 className='section--title'>about me</h3>
 				<p className='about--info'>
 					<span className='accent-text'>Hello!</span> My name is David
 					Schaeffer, and I'm studying Computer Science and Behavioral

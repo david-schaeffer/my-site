@@ -365,7 +365,7 @@ a {
   align-items: flex-start;
 }
 
-.about--title {
+.section--title {
   font-size: 2rem;
   font-family: var(--subheading);
   font-style: italic;
@@ -376,7 +376,7 @@ a {
   width: 100%;
 }
 
-.about--title::after {
+.section--title::after {
   content: "";
   display: block;
   position: relative;
