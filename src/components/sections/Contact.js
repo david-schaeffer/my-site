@@ -24,7 +24,7 @@ export default function Contact() {
 						method='POST'
 						onSubmit={handleSubmit}
 						netlify-honeypot='bot-field'
-						data-netlify='true'
+						netlify
 					>
 						<div className='name-wrapper'>
 							<label className='contact--label'>
