@@ -3,6 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+function handleSubmit(e) {
+	e.preventDefault();
+}
+
 export default function Contact() {
 	return (
 		<section id='contact' className='section'>
@@ -18,6 +22,7 @@ export default function Contact() {
 						className='contact--form'
 						name='contact'
 						method='POST'
+						onSubmit={handleSubmit}
 						netlify-honeypot='bot-field'
 						data-netlify='true'
 					>
