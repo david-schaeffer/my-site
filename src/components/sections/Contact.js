@@ -23,6 +23,12 @@ export default function Contact() {
 					>
 						{/* FOR NETLIFY */}
 						<input type='hidden' name='form-name' value='Contact Form' />
+						<input
+							type='hidden'
+							name='subject'
+							value='New submission from portfolio contact form'
+						/>
+						{/* FOR NETLIFY */}
 						<div className='name-wrapper'>
 							<label className='contact--label'>
 								<input
