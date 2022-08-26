@@ -78,10 +78,13 @@ export default function Sidebar() {
 					>
 						contact
 					</Link>
-					<a className='sidebar--nav_link' href='#'>
+					<Link
+						className='sidebar--nav_link resume'
+						to='/resume'
+						onClick={toggleMenu}
+					>
 						resume
-					</a>
-					{/* MAKE THIS DOWNLOADABLE RESUME OR VIEW IN BROWSER? */}
+					</Link>
 				</div>
 				<div className='sidebar--nav_bottom'>
 					<div className='sidebar--social_links'>
