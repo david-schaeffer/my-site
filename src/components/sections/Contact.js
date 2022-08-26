@@ -21,6 +21,8 @@ export default function Contact() {
 						netlify-honeypot='bot-field'
 						data-netlify='true'
 					>
+						{/* FOR NETLIFY */}
+						<input type='hidden' name='form-name' value='Contact Form' />
 						<div className='name-wrapper'>
 							<label className='contact--label'>
 								<input
