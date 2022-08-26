@@ -1,24 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 export default function Experience() {
 	const [outerTab, setOuterTab] = useState(0);
+	const [outerTabWidth, setOuterTabWidth] = useState(0);
 	const [innerTab, setInnerTab] = useState(0);
+	const [innerTabWidth, setInnerTabWidth] = useState(0);
+	const [windowWidth, setWindowWidth] = useState(0);
 
 	const query = useStaticQuery(graphql`
 		query {
 			allContentfulProject {
 				nodes {
-					title
+					heading
 					desc
+					title
 					url
-					id
 				}
 			}
 			allContentfulCourse(sort: { fields: order }) {
 				nodes {
-					id
 					desc
+					heading
 					title
 				}
 			}
@@ -29,6 +32,17 @@ export default function Experience() {
 		outerTab === 0
 			? query.allContentfulProject.nodes
 			: query.allContentfulCourse.nodes;
+
+	useEffect(() => {
+		setSizes();
+		window.addEventListener('resize', setSizes);
+	});
+
+	function setSizes() {
+		setWindowWidth(window.innerWidth);
+		setOuterTabWidth(document.querySelector('.exp--tab.outer').offsetWidth);
+		setInnerTabWidth(document.querySelector('.exp--tab.inner').offsetWidth);
+	}
 
 	return (
 		<section id='experience' className='section'>
@@ -60,6 +74,19 @@ export default function Experience() {
 						>
 							Courses
 						</button>
+						<div
+							className='highlight-container'
+							style={{
+								left: `${
+									windowWidth >= 768 ? 160 : outerTabWidth * outerTab
+								}px`,
+								top: `${windowWidth >= 768 ? 48 * outerTab : 48}px`,
+								width: `${windowWidth >= 768 ? 2 : outerTabWidth}px`,
+							}}
+						>
+							<div className='highlight-border'></div>
+							<div className='highlight-arrow'></div>
+						</div>
 					</div>
 					<div className='exp--inner_tabs'>
 						{data.map((tab, index) => {
@@ -69,18 +96,31 @@ export default function Experience() {
 									className={`exp--tab inner hover${
 										innerTab === index ? ' active' : ''
 									}`}
-									key={tab.id}
+									key={index}
 									onClick={() => setInnerTab(index)}
 								>
 									{tab.title}
 								</button>
 							);
 						})}
+						<div
+							className='highlight-container inner'
+							style={{
+								left: `${
+									windowWidth >= 768 ? 177 : innerTabWidth * innerTab
+								}px`,
+								top: `${windowWidth >= 768 ? 48 * innerTab : 48}px`,
+								width: `${windowWidth >= 768 ? 2 : innerTabWidth - 1}px`,
+							}}
+						>
+							<div className='highlight-border'></div>
+							<div className='highlight-arrow'></div>
+						</div>
 					</div>
 					<div className='exp--info'>
 						<h3 className='exp--info_title'>{data[innerTab].title}</h3>
 						<p className='exp--info_desc'>{data[innerTab].desc}</p>
-						{outerTab === 0 && (
+						{data[innerTab].url && (
 							<a
 								className='exp--info_url'
 								href={data[innerTab].url}

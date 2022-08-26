@@ -59,7 +59,6 @@ a {
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  z-index: -999;
 }
 
 /* Track */
@@ -115,7 +114,7 @@ a {
   position: fixed;
   top: 1.6rem;
   left: 1.6rem;
-  z-index: 9999;
+  z-index: 100;
   cursor: pointer;
 }
 
@@ -176,7 +175,7 @@ a {
   align-items: center;
   justify-items: center;
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 99;
 }
 
 @media screen and (max-width: 1024px) {
@@ -501,12 +500,12 @@ a {
 
 /* EXPERIENCE */
 
-#experience {
-  display: block;
+.exp--wrapper {
+  height: 600px;
 }
 
 .exp--table_wrapper {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -515,51 +514,51 @@ a {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  border-bottom: 2px solid var(--background-2);
+  position: relative;  
 }
 
 .exp--inner_tabs {
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
-  border-bottom: 2px solid var(--background-2);
+  position: relative;
+  padding-bottom: 1rem;
 }
 
 .exp--tab {
-  display: inline-block;
-  height: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
   padding: 0 1rem;
+  min-width: 9.5rem;
   width: 100%;
   font-family: var(--copy);
   background-color: transparent;
   color: var(--secondary);
   border: none;
+  border-bottom: 2px solid var(--background-2);
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
 
-.exp--tab.inner {
-  width: max-content;
+.exp--tab.outer {
+  min-width: 0;
 }
 
 .exp--tab.active {
-  background-color: var(--background-2);
-  border-bottom: 2px solid var(--accent);
   color: var(--accent);
+  background: linear-gradient(transparent, var(--background-2));
 }
 
 .exp--tab:hover {
   background-color: var(--background-2);
 }
 
-@media screen and (min-width: 1024px) {
-  .exp--tab {
-    cursor: none;
-  }
-}
-
 .exp--info {
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 .exp--info_title {
@@ -595,4 +594,98 @@ a {
 
 .exp--info_url:hover {
   color: var(--accent);
+}
+
+.highlight-container {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  height: 2px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.highlight-container.inner {
+  bottom: 1rem;
+}
+
+.highlight-border {
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+  position: absolute;
+  bottom: 0;
+}
+
+.highlight-arrow {
+  position: relative;
+  top: 100%;
+  border-top: 0.5rem solid var(--accent);
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .exp--table_wrapper {
+    height: 240px;
+    display: grid;
+    grid-template-columns: 160px 186px auto;
+  }
+
+  .exp--outer_tabs {
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    border-bottom: none;
+  }
+  
+  .exp--inner_tabs {
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    border-bottom: none;
+    padding-right: 0.6rem;
+  }
+
+  .exp--tab {
+    padding: 1rem;
+    flex-direction: row;
+    border-bottom: none;
+  }
+
+  .exp--tab.active {
+    padding-top: 1rem;
+    background: linear-gradient(90deg, transparent, var(--background-2));
+  }
+  
+  .exp--info {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .highlight-container {
+    width: 2px;
+    height: 3rem;
+    flex-direction: column;
+  }
+
+  .highlight-border {
+    height: 100%;
+    width: 2px;
+  }
+
+  .highlight-arrow {
+    top: 0;
+    left: 1px;
+    border-left: 0.5rem solid var(--accent);
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .exp--tab {
+    cursor: none;
+  }
 }
