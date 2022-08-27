@@ -18,15 +18,15 @@ export default function Contact() {
 						className='contact--form'
 						name='Contact Form'
 						method='POST'
+						action='/pages/success'
 						netlify-honeypot='bot-field'
-						data-netlify='true'
+						netlify
 					>
 						{/* vv FOR NETLIFY vv */}
 						<input type='hidden' name='form-name' value='Contact Form' />
 						<input
 							type='hidden'
 							name='subject'
-							action='/pages/success'
 							value='New submission from portfolio contact form'
 						/>
 						{/* ^^ FOR NETLIFY ^^ */}
