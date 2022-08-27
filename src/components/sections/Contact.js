@@ -21,14 +21,14 @@ export default function Contact() {
 						netlify-honeypot='bot-field'
 						data-netlify='true'
 					>
-						{/* FOR NETLIFY */}
+						{/* vv FOR NETLIFY vv */}
 						<input type='hidden' name='form-name' value='Contact Form' />
 						<input
 							type='hidden'
 							name='subject'
 							value='New submission from portfolio contact form'
 						/>
-						{/* FOR NETLIFY */}
+						{/* ^^ FOR NETLIFY ^^ */}
 						<div className='name-wrapper'>
 							<label className='contact--label'>
 								<input

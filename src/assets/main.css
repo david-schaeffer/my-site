@@ -45,8 +45,12 @@ body.dark-mode {
   --accent: #66ccff;
 }
 
-body.lock-scroll::-webkit-scrollbar {
-  display: none;
+/* GENERAL STYLES */
+
+body {
+  font-family: var(--copy);
+  font-size: 1rem;
+  color: var(--secondary);
 }
 
 a {
@@ -626,6 +630,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .exp--wrapper {
+    height: auto;
+  }
+
   .exp--table_wrapper {
     height: 240px;
     display: grid;
@@ -854,5 +862,34 @@ a {
 @media screen and (min-width: 1024px) {
   .contact--submit {
     cursor: none;
+  }
+}
+
+/* RESUME */
+
+.resume--link_wrapper {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.resume--link {
+  color: var(--secondary);
+  transition: all 0.3s ease;
+  margin: 0 1rem;
+}
+
+.resume--link:hover {
+  color: var(--accent);
+}
+
+@media screen and (min-width: 768px) {
+  .resume--link_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resume--link {
+    margin-top: 1rem;
   }
 }

@@ -40,8 +40,10 @@ export default function Experience() {
 
 	function setSizes() {
 		setWindowWidth(window.innerWidth);
-		setOuterTabWidth(document.querySelector('.exp--tab.outer').offsetWidth);
-		setInnerTabWidth(document.querySelector('.exp--tab.inner').offsetWidth);
+		const outerTabEl = document.querySelector('.exp--tab.outer');
+		const innerTabEl = document.querySelector('.exp--tab.inner');
+		outerTabEl && setOuterTabWidth(outerTabEl.offsetWidth);
+		innerTabEl && setInnerTabWidth(innerTabEl.offsetWidth);
 	}
 
 	return (
@@ -80,7 +82,7 @@ export default function Experience() {
 								left: `${
 									windowWidth >= 768 ? 160 : outerTabWidth * outerTab
 								}px`,
-								top: `${windowWidth >= 768 ? 48 * outerTab : 48}px`,
+								top: `${windowWidth >= 768 ? 48 * outerTab : 46}px`,
 								width: `${windowWidth >= 768 ? 2 : outerTabWidth}px`,
 							}}
 						>
@@ -109,7 +111,7 @@ export default function Experience() {
 								left: `${
 									windowWidth >= 768 ? 177 : innerTabWidth * innerTab
 								}px`,
-								top: `${windowWidth >= 768 ? 48 * innerTab : 48}px`,
+								top: `${windowWidth >= 768 ? 48 * innerTab : 46}px`,
 								width: `${windowWidth >= 768 ? 2 : innerTabWidth - 1}px`,
 							}}
 						>
