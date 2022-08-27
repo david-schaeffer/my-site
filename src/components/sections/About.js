@@ -12,22 +12,36 @@ export default function About() {
 					Neuroscience in the honors program at Northeastern University.
 					<br />
 					<br />
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit duis
-					tristique sollicitudin nibh sit amet commodo. Non arcu risus quis
-					varius quam quisque id. Tellus rutrum tellus pellentesque eu tincidunt
-					tortor aliquam nulla facilisi.
+					My love for coding began when I made my first program in MIT's{' '}
+					<a
+						href='https://scratch.mit.edu/'
+						rel='noopener noreferrer'
+						target='_blank'
+					>
+						Scratch
+					</a>{' '}
+					programming language (a randomly-generated math test!). Now, as I
+					enter my second year of study, I'm interested particularly in the
+					intersection of artificial and natural intelligence, the development
+					of ethical software, and the use of technology to improve quality of
+					life.
 					<br />
 					<br />
-					Eu non diam phasellus vestibulum lorem sed risus ultricies tristique.
-					Malesuada proin libero nunc consequat interdum varius sit amet mattis.
-					Consequat mauris nunc congue nisi vitae suscipit tellus. Mattis enim
-					ut tellus elementum sagittis.
+					I'm never one to shy away from a challenge, and I constantly strive to
+					learn more and improve my skills. Recently, I delved into front end
+					development, using tools such as Gatsby, CSS, and Netlify to create
+					this website.
 					<br />
 					<br />
-					Sed velit dignissim sodales ut. Sagittis eu volutpat odio facilisis
-					mauris sit. Sit amet risus nullam eget felis eget nunc lobortis
-					mattis. In arcu cursus euismod quis viverra nibh.
+					Outside my studies, you can find me singing with the{' '}
+					<a
+						href='https://www.nunoreasters.com/'
+						rel='noopener noreferrer'
+						target='_blank'
+					>
+						Nor'easters
+					</a>
+					, experimenting in the kitchen, or exploring Boston.
 				</p>
 				<div className='about--image'>
 					<StaticImage
