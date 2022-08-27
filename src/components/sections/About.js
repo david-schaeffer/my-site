@@ -12,7 +12,8 @@ export default function About() {
 					Neuroscience in the honors program at Northeastern University.
 					<br />
 					<br />
-					My love for coding began when I made my first program in MIT's{' '}
+					My love for coding began when I made my first program (a
+					randomly-generated math test) in MIT's{' '}
 					<a
 						href='https://scratch.mit.edu/'
 						rel='noopener noreferrer'
@@ -20,11 +21,10 @@ export default function About() {
 					>
 						Scratch
 					</a>{' '}
-					programming language (a randomly-generated math test!). Now, as I
-					enter my second year of study, I'm interested particularly in the
-					intersection of artificial and natural intelligence, the development
-					of ethical software, and the use of technology to improve quality of
-					life.
+					programming language. Now, as I enter my second year of study, I'm
+					interested particularly in the intersection of artificial and natural
+					intelligence, the development of ethical software, and the use of
+					technology to improve quality of life.
 					<br />
 					<br />
 					I'm never one to shy away from a challenge, and I constantly strive to
