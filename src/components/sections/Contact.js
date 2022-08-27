@@ -37,6 +37,7 @@ export default function Contact() {
 									type='text'
 									name='name'
 									placeholder='name'
+									required
 								/>
 							</label>
 						</div>
