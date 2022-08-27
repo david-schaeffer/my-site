@@ -303,6 +303,26 @@ a:hover {
   }
 }
 
+/* FOOTER */
+
+footer {
+  background-color: var(--background);
+}
+
+.footer--wrapper {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  color: var(--secondary);
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer--wrapper {
+    padding-left: 180px;
+  }
+}
+
 /* HOMEPAGE */
 
 .section {
@@ -794,8 +814,9 @@ a:hover {
 
 .contact--social_wrapper {
   border-top: 2px solid var(--background-2);
+  border-bottom: 2px solid var(--background-2);
   margin-top: 2rem;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 .contact--social_links {
@@ -861,6 +882,7 @@ a:hover {
   
   .contact--social_wrapper {
     border-top: none;
+    border-bottom: none;
     border-left: 2px solid var(--background-2);
     padding: 1.5rem 2rem;
     display: flex;
