@@ -26,6 +26,7 @@ export default function Contact() {
 						<input
 							type='hidden'
 							name='subject'
+							action='/pages/success'
 							value='New submission from portfolio contact form'
 						/>
 						{/* ^^ FOR NETLIFY ^^ */}
