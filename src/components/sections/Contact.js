@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { navigate } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+function encode(data) {
+	return Object.keys(data)
+		.map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+		.join('&');
+}
+
 export default function Contact() {
+	const [formData, setFormData] = useState({});
+
+	const handleChange = (e) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const form = e.target;
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({
+				'form-name': form.getAttribute('name'),
+				...formData,
+			}),
+		})
+			.then(() => navigate(form.getAttribute('action')))
+			.catch((error) => alert(error));
+	};
+
 	return (
 		<section id='contact' className='section'>
 			<div className='contact--section section-wrapper'>
@@ -17,10 +45,11 @@ export default function Contact() {
 					<form
 						className='contact--form'
 						name='Contact Form'
-						method='POST'
+						method='post'
 						action='/success'
 						netlify-honeypot='bot-field'
 						netlify
+						onSubmit={handleSubmit}
 					>
 						{/* vv FOR NETLIFY vv */}
 						<input type='hidden' name='form-name' value='Contact Form' />
@@ -38,6 +67,7 @@ export default function Contact() {
 									name='name'
 									placeholder='name'
 									required
+									onChange={handleChange}
 								/>
 							</label>
 						</div>
@@ -49,6 +79,7 @@ export default function Contact() {
 									name='email'
 									placeholder='email'
 									required
+									onChange={handleChange}
 								/>
 							</label>
 						</div>
@@ -59,6 +90,7 @@ export default function Contact() {
 									name='message'
 									placeholder='message'
 									required
+									onChange={handleChange}
 								/>
 							</label>
 						</div>
