@@ -1,6 +1,5 @@
 import React from 'react';
-import resumeLight from '../assets/documents/resume-light.pdf';
-import resumeDark from '../assets/documents/resume-dark.pdf';
+import resume from '../assets/documents/resume.pdf';
 
 export default function Resume() {
 	return (
@@ -19,18 +18,10 @@ export default function Resume() {
 					<a
 						className='resume--link'
 						rel='noopener noreferrer'
-						href={resumeLight}
+						href={resume}
 						target='_blank'
 					>
-						→ light version
-					</a>
-					<a
-						className='resume--link'
-						rel='noopener noreferrer'
-						href={resumeDark}
-						target='_blank'
-					>
-						→ dark version
+						→ click here
 					</a>
 				</div>
 			</div>
