@@ -8182,25 +8182,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"got@npm:^9.6.0":
-  version: 9.6.0
-  resolution: "got@npm:9.6.0"
-  dependencies:
-    "@sindresorhus/is": ^0.14.0
-    "@szmarczak/http-timer": ^1.1.2
-    cacheable-request: ^6.0.0
-    decompress-response: ^3.3.0
-    duplexer3: ^0.1.4
-    get-stream: ^4.1.0
-    lowercase-keys: ^1.0.1
-    mimic-response: ^1.0.1
-    p-cancelable: ^1.0.0
-    to-readable-stream: ^1.0.0
-    url-parse-lax: ^3.0.0
-  checksum: 941807bd9704bacf5eb401f0cc1212ffa1f67c6642f2d028fd75900471c221b1da2b8527f4553d2558f3faeda62ea1cf31665f8b002c6137f5de8732f07370b0
-  languageName: node
-  linkType: hard
-
 "graceful-fs@npm:4.2.10":
   version: 4.2.10
   resolution: "graceful-fs@npm:4.2.10"
@@ -8911,7 +8892,7 @@ __metadata:
   version: 9.0.1
   resolution: "is-online@npm:9.0.1"
   dependencies:
-    got: ^11.8.0
+    got: ^11.8.5
     p-any: ^3.0.0
     p-timeout: ^3.2.0
     public-ip: ^4.0.4
@@ -11717,7 +11698,7 @@ __metadata:
   resolution: "public-ip@npm:4.0.4"
   dependencies:
     dns-socket: ^4.2.2
-    got: ^9.6.0
+    got: ^11.8.5
     is-ip: ^3.1.0
   checksum: 9a0c3194b219d14e8996080f90857ca025c37ebe233cb89b7ba629714ebcdc6dfd563084931d497c597b56599468ec064b7a9196bbdc92feefa908d1e1585ea7
   languageName: node
