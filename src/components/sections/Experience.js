@@ -18,7 +18,7 @@ export default function Experience() {
 					url
 				}
 			}
-			allContentfulCourse(sort: { fields: order }) {
+			allContentfulCourse(sort: {order: ASC}) {
 				nodes {
 					desc
 					heading
