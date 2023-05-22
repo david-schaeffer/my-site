@@ -20,7 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "babel-plugin-styled-components": "^2.1.3",
-    "gatsby": "^5.10.0",
+    "gatsby": "latest",
     "gatsby-cli": "^5.10.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.10.0",
