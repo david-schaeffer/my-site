@@ -666,7 +666,6 @@ footer {
   }
 
   .exp--table_wrapper {
-    height: 240px;
     display: grid;
     grid-template-columns: 160px 186px auto;
   }
