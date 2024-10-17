@@ -15,7 +15,7 @@ export default function About() {
           <a href="https://scratch.mit.edu/" rel="noopener noreferrer" target="_blank">
             Scratch
           </a>{" "}
-          programming language. Now, as I enter my final year of study, I'm interested particularly in human computer
+          programming language. Now, as I enter my final year of study, I'm interested particularly in human-computer
           interaction, the development of ethical software, and the use of technology to improve quality of life.
           <br />
           <br />
