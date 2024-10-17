@@ -15,21 +15,20 @@ export default function About() {
           <a href="https://scratch.mit.edu/" rel="noopener noreferrer" target="_blank">
             Scratch
           </a>{" "}
-          programming language. Now, as I enter my second year of study, I'm interested particularly in the intersection
-          of artificial and natural intelligence, the development of ethical software, and the use of technology to
-          improve quality of life.
+          programming language. Now, as I enter my final year of study, I'm interested particularly in human computer
+          interaction, the development of ethical software, and the use of technology to improve quality of life.
           <br />
           <br />
           I'm never one to shy away from a challenge, and I constantly strive to learn more and improve my skills.
-          Recently, I delved into front end development, using tools such as Gatsby, CSS, and Netlify to create this
-          website.
+          Recently, I have been exploring mobile development, independently learning the Swift programming language, and
+          working on developing a Slack app using TypeScript, Node.js, and AWS!
           <br />
           <br />
           Outside my studies, you can find me singing with the{" "}
           <a href="https://www.nunoreasters.com/" rel="noopener noreferrer" target="_blank">
             Nor'easters
           </a>
-          , experimenting in the kitchen, or exploring Boston.
+          , experimenting in the kitchen, or searching for my new favorite coffee shop in Boston.
         </p>
         <div className="about--image">
           <StaticImage
